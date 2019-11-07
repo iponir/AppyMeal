@@ -10,9 +10,13 @@
 /* Redis Password */
 //ssh appymeal.ga -> psswd: appymeal1
 
+//--TODO--
+    //Look into iTunes for app
+    //Deploy to Google Play Store
 
 function googleLogin() {
 
+    //TODO: Add functionality
 }
 
 function onSignIn(googleUser) {
@@ -38,7 +42,6 @@ function signOut() {
     });
   }
 
-  
 function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
@@ -47,8 +50,18 @@ function checkLoginState() {
 
 function facebookLogin() { 
 
+    //TODO: Add functionality
 }
 
 function appyLogin() {
+    
+    //Used by access through the redis-cli > ssh appymeal.ga -> $redis-cli
+    var redis = require('redis');
+    var client = redis.createClient(80, appymeal.ga);
+
+    client.on('connect', function() {
+        console.log('connected');
+    })
+
 
 }
