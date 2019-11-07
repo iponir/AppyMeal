@@ -28,8 +28,8 @@ body {
 }
 
 #background {
-	background: url(../img/main_screen_img.jpg);
-	background-size: cover;
+	background-color: #FF6601;
+	background-size: cover; 
 	min-height: 100vh;
 	min-width: 100vw;
 	position: absolute;
