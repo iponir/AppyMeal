@@ -22,6 +22,15 @@ body {
 	padding: 20px 0;
 }
 
+.g-signin2{
+	width: 100%;
+	text-align: right;
+}
+  
+  .g-signin2 > div{
+	margin:  auto;
+}
+
 #main {
 	text-align: center;
 	padding-top: calc(50vh - 77px);
