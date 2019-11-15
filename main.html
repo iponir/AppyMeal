@@ -2,13 +2,16 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="google-signin-client_id" content="589433053841-5p63ee18j0p4gju48lnusclrvg6fnp8k.apps.googleusercontent.com">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="js/index.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
 	<body>
 		<div id="header">
 			<input id="searchField" placeholder="Search"><!--
 			--><img id="searchButton" src="img/search.svg">
+			<a href="#" onclick="signOut();">Sign out</a>
 		</div>
 		<div id="restaurantList">
 			<div class="restaurant">

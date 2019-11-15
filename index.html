@@ -17,7 +17,10 @@
 				xfbml      : true,
 				version    : 'v5.0'
 				});
-				FB.AppEvents.logPageView();   
+				FB.AppEvents.logPageView();  
+				FB.getLoginStatus(function(response) {
+					statusChangeCallback(response);
+				});
 			};
 
 			(function(d, s, id){
@@ -34,15 +37,14 @@
 				<div class="button" onclick="googleLogin()">
 					<img src="img/google.svg">
 				</div>
-				<div class="g-signin2" data-onsuccess="onSignIn"
-				data-longtitle="true">
+				<div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true">
 				</div>
 				<div class="button" onclick="facebookLogin()">
 					<img src="img/facebook.svg">
 				</div>
 				<fb:login-button 
   					scope="public_profile,email"
- 					 onlogin="checkLoginState();">
+ 					onlogin="checkLoginState();">
 				</fb:login-button>
 				<div class="button" onclick="appyLogin()"> APPYMeal </div>
 			</div>
