@@ -22,9 +22,9 @@ function googleLogin() {
 function switchPage() {
     window.location.href="main.html";
 }
+
 function onSignIn(googleUser) {
 
-    switchPage();
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
@@ -37,10 +37,11 @@ function onSignIn(googleUser) {
     
     //Store the entity object in sessionStorage where it will be accessible from all pages of your site.
     sessionStorage.setItem('myUserEntity',JSON.stringify(myUserEntity));
+
+    switchPage();
 }
 
-function checkIfLoggedIn()
-{
+function checkIfLoggedIn() {
   if(sessionStorage.getItem('myUserEntity') == null){
     //Redirect to login page, no user entity available in sessionStorage
     window.location.href='main.html';
@@ -52,27 +53,38 @@ function checkIfLoggedIn()
   }
 }
 
-function signOut() {
+function GoogleSignOut() {
 
-    //window.location.href = "index.html";
     var auth2 = gapi.auth2.getAuthInstance();
+    console.log(auth2);
     auth2.signOut().then(function () {
       console.log('User signed out.');
     });
-  }
+    auth2.disconnect();
+    window.location.href = "index.html";
+}
 
-  function onLoad() {
-    gapi.load('auth2', function() {
-      gapi.auth2.init();
-    });
-  }
+function FacebookSignOut() {
+
+  FB.logout(function(response) {
+    // user is now logged out
+  });
+  window.location.href = "index.html";
+}
+
+function onLoad() {
+  gapi.load('auth2', function() {
+    gapi.auth2.init();
+  });
+}
 
 function checkLoginState() {
 
-    window.location.href = "main.html";
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
     });
+
+    window.location.href = "main.html";
 }
 
 function facebookLogin() { 

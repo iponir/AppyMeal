@@ -6,14 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="js/index.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+		<script>	
+				window.fbAsyncInit = function() {
+					FB.init({
+					appId      : '688594048297404',
+					cookie     : true,
+					xfbml      : true,
+					version    : 'v5.0'
+					});
+					FB.AppEvents.logPageView();  
+					FB.getLoginStatus(function(response) {
+						statusChangeCallback(response);
+					});
+				};
+	
+				(function(d, s, id){
+					var js, fjs=d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) {return;}
+					js=d.createElement(s); js.id=id;
+					js.src="https://connect.facebook.net/en_US/sdk.js";
+					fjs.parentNode.insertBefore(js, fjs);
+					}(document,'script','facebook-jssdk'));
+		</script>
 	</head>
 	<body>
 		<div id="header">
 			<input id="searchField" placeholder="Search"><!--
 			--><img id="searchButton" src="img/search.svg">
-			<a href="#" onclick="signOut();">Sign out</a>
+			
 		</div>
+
 		<div id="restaurantList">
+				<a href="#" onclick="FacebookSignOut();">Sign out</a>
 			<div class="restaurant">
 				<span class="name">Restaurant 1</span><span class="distance">1.0 mi</span>
 			</div>
