@@ -1,0 +1,16 @@
+{
+  "name": "redis_users",
+  "version": "1.0.0",
+  "description": "Local testing for authenticating/logging redis user",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Ishtyaq Ponir",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^13.3.0",
+    "redis": "^2.8.0"
+  }
+}
