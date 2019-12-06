@@ -13,6 +13,7 @@
 //--TODO--
     //Look into iTunes for app
     //Deploy to Google Play Store
+    //RSync?
 
 function googleLogin() {
 
