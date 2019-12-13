@@ -15,6 +15,11 @@
     //Deploy to Google Play Store
     //RSync?
 
+//EngineX -> Current Web Server 
+
+
+//const redis = require('redis');
+
 function googleLogin() {
 
     //TODO: Add functionality
@@ -97,7 +102,7 @@ function appyLogin() {
     
     //Used by access through the redis-cli > ssh appymeal.ga -> $redis-cli
     var redis = require('redis');
-    var client = redis.createClient(80, appymeal.ga);
+    var client = redis.createClient(80, "localhost");
 
     client.on('connect', function() {
         console.log('connected');
