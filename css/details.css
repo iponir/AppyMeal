@@ -1,0 +1,53 @@
+* {
+	font-family: Sans-Serif;
+	font-weight: normal;
+	margin: 0;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+h1 {
+	color: white;
+	background: #595959; 
+	margin-bottom: 10px;
+}
+
+h3 {
+	font-size: 1.5em;
+	color: #595959;
+}
+
+span:nth-child(3n + 1) {
+	display: inline-block;
+	width: calc(100% - 2 * 35px - 4 * 2px);
+	line-height: 35px;
+}
+
+.menuEntry {
+	color: #595959;
+	margin: 10px 0;
+}
+
+.button {
+	display: inline-block;
+	background: #595959;
+	padding: 5px;
+	margin: 0 2px;
+	vertical-align: top;
+}
+
+.button img {
+	height: 25px;
+}
+
+#menu {
+	padding: 0 20px;
+}
+
+#map {
+	width: 100%;
+	border: none;
+	height: 250px;
+}

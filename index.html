@@ -36,21 +36,25 @@
 				fjs.parentNode.insertBefore(js, fjs);
 				}(document,'script','facebook-jssdk'));
 		</script>
-		<!--div id="background"></div-->
+		<div id="background"></div>
 		<div id="main">
 			<div id="loginType">
 				<div class="button" onclick="googleLogin()">
 					<img src="img/google.svg">
 				</div>
+				<!--
 				<div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true">
 				</div>
+				-->
 				<div class="button" onclick="facebookLogin()">
 					<img src="img/facebook.svg">
 				</div>
+				<!--
 				<fb:login-button 
   					scope="public_profile,email"
  					onlogin="checkLoginState();">
 				</fb:login-button>
+				-->
 				<div class="button" onclick="appyLogin()"> APPYMeal </div>
 			</div>
 			<div id="googleLogin">
