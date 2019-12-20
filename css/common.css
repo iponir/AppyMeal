@@ -1,0 +1,49 @@
+html {
+	height: 100vh;
+	background: #222;
+}
+
+body {
+	text-align: center;
+	width: 360px;
+	padding: 30px 10px 10px 10px;
+	margin: calc((100vh - 780px) / 2) auto;
+	background: black;
+	border-radius: 40px 40px 40px 40px;
+}
+
+#speaker {
+	display: inline-block;
+	height: 10px;
+	width: 50px;
+	background: #222;
+	border-radius: 5px;
+	position: absolute;
+	left: calc(50vw - 50px / 2);
+	top: calc((100vh - 780px) / 2 + 10px);
+}
+
+#camera {
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background: #222;
+	border-radius: 50%;
+	position: absolute;
+	left: calc(50vw + 35px);
+	top: calc((100vh - 780px) / 2 + 9px);
+}
+
+#screen {
+	display: block;
+	height: 740px;
+	width: 360px;
+	border-radius: 30px;
+}
+
+#screen > module {
+	display: block;
+	height: 100%;
+	width: 100%;
+	border-radius: 30px;
+}

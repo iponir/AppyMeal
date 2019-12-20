@@ -1,0 +1,17 @@
+body {
+	background: linear-gradient(#bf1e2e 25%, white 50%);
+	text-align: center;
+}
+
+.loadingBlock {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin: 600px 3px 0 3px;
+	border: 5px solid #bf1e2e;
+	transition: 0.5s;
+}
+
+.loadingBlock.fill {
+	background: #bf1e2e;
+}
