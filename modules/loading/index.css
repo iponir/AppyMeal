@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(#bf1e2e 25%, white 50%);
+	background: linear-gradient(#be1e2d 25%, white 50%);
 	text-align: center;
 }
 
@@ -7,11 +7,22 @@ body {
 	display: inline-block;
 	width: 25px;
 	height: 25px;
-	margin: 600px 3px 0 3px;
-	border: 5px solid #bf1e2e;
+	margin: 10px 3px 0 3px;
+	border: 5px solid #be1e2d;
 	transition: 0.5s;
 }
 
 .loadingBlock.fill {
-	background: #bf1e2e;
+	background: #be1e2d;
+}
+
+#logo {
+	width: 330px;
+	margin-top: 30px;
+}
+
+#loading {
+	display: block;
+	height: 37px;
+	margin: 150px auto 0 auto;
 }
