@@ -12,6 +12,48 @@ body {
 	border-radius: 40px 40px 40px 40px;
 }
 
+a {
+	color: #be1e2d;
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+label {
+	color: dimgray;
+	display: block;
+	text-align: left;
+	margin: 25px 25px 0 25px;
+	width: 100%;
+}
+
+input[type="text"], input[type="password"] {
+	border: none;
+	border-bottom: 1px solid lightgray;
+	margin: 0 25px;
+	padding: 5px 0;
+	width: calc(100% - 2 * 25px);
+	font-size: 1em;
+}
+
+input[type="submit"] {
+	display: block;
+	font-size: 1.1em;
+	color: white;
+	background: #be1e2d;
+	padding: 15px 0;
+	margin: 50px 25px;
+	width: calc(100% - 2 * 25px);
+	border-radius: 5px;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+}
+
 #speaker {
 	display: inline-block;
 	height: 10px;
@@ -46,4 +88,37 @@ body {
 	height: 100%;
 	width: 100%;
 	border-radius: 30px;
+	font-family: sans-serif;
 }
+
+#headerBar {
+	text-align: left;
+	display: block;
+	height: 60px;
+	width: 100%;
+	background: #be1e2d;
+	color: white;
+	line-height: 60px;
+	border-radius: 30px 30px 0 0;
+}
+
+#backButton {
+	font-size: 2em;
+	padding: 0 25px;
+	margin-top: -3px;
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+}
+ #pageTitle {
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+ }
+
+ #main {
+ 	background: white;
+	display: block;
+	height: calc(100% - 60px);
+	border-radius: 0 0 30px 30px;
+ }
