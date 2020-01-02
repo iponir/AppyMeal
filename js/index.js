@@ -100,7 +100,7 @@ function facebookLogin() {
 
 function appyLogin() {
     
-    //Used by access through the redis-cli > ssh appymeal.ga -> $redis-cli
+    //Used by access through the redis-cli > ssh appymeal.ga -> $redis-cli -> /*NOT REALLY*/
     var redis = require('redis');
     var client = redis.createClient(80, "localhost");
 

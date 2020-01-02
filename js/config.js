@@ -3,7 +3,7 @@
 requirejs.config({
     baseUrl:'js',
     paths:{
-        redis: '',
+        redis: 'redis',
         angular:'angular.min',
         extCore:'ext-core',
         jquery:'jquiery.min',
