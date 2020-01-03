@@ -835,7 +835,7 @@ function applyPolyfills(){
 	}
 }
 
-document.documentElement.setAttribute("style", "display: none;");
+document.documentElement.setAttribute("style", "display: none;");;
 
 waitForBody = setInterval(
 	function(){
@@ -844,18 +844,6 @@ waitForBody = setInterval(
 			applyPolyfills();
 			modularjs.setup();
 			modularjs.main();
-
-			// Apply any cached style rules
-			for(var moduleName in modularjs.cache){
-
-				// If there is no cache, continue
-				if(!modularjs.cache[moduleName].style){
-					continue;
-				}
-
-				document.getElementsByTagName("style")[0].innerText += modularjs.cache[moduleName].style;
-			}
-
 			document.documentElement.removeAttribute("style");
 		}
 	},

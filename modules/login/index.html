@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="index.css">
+<script src="index.js"></script>
+
+<div id="headerBar">
+	<span id="backButton">‹</span><span id="pageTitle">Sign In</span>
+</div>
+
+<div id="main">
+	<img id="logo" src="logo.svg">
+
+	<form id="loginForm" onsubmit="return login()">
+		<label>Mobile Number</label>
+		<input type="text" name="phone">
+		<label>Password</label>
+		<input type="password" name="password">
+		<a id="forgotPassword">Forgot Password?</a>
+		<input type="submit" value="Sign In">
+		<p>Don't have an Account? <a>Sing Up</a><p>
+	</form>
+</div>
