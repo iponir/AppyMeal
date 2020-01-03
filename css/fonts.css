@@ -1,0 +1,29 @@
+@font-face {
+	font-family: GillSans;
+	src: url(/fonts/GillSans.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: GillSans;
+	src: url(/fonts/GillSansItalic.ttf) format('truetype');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: GillSans;
+	src: url(/fonts/GillSansBold.ttf) format('truetype');
+	font-style: bold;
+}
+
+@font-face {
+	font-family: GillSans;
+	src: url(/fonts/GillSansBold.ttf) format('truetype');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: GillSans;
+	src: url(/fonts/GillSansBoldItalic.ttf) format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
