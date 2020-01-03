@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* Google Metadata */
 //client_id : 589433053841-5p63ee18j0p4gju48lnusclrvg6fnp8k.apps.googleusercontent.com
 //*OAuth client -> client_secret : JxbpFD5QqGNUYSVB9S0KvUqL
@@ -106,9 +106,8 @@ function appyLogin() {
         console.log('connected');
     })
 }
-=======
 // Navigate to the home page
 function goHome(){
 	console.log("TODO: goHome");
 }
->>>>>>> origin/poc
+
