@@ -6,7 +6,7 @@ function login(){
 	var loadingPage = modularjs.newModule(
 		"loading",
 		{
-			"onFinishedLoading" : goHome
+			"onFinishedLoading" : "goHome"
 		}
 	);
 
@@ -15,6 +15,5 @@ function login(){
 	screen.appendChild(loadingPage);
 
 	// Return false to prevent page redirect
-	console.log("here");
 	return false;
 }
