@@ -10,11 +10,8 @@
 /* Redis Password */
 //ssh appymeal.ga -> psswd: appymeal1
 
-//--TODO--
-    //Look into iTunes for app
-    //Deploy to Google Play Store
-    //RSync?
 
+//RSync?
 //EngineX -> Current Web Server 
 
 
@@ -23,6 +20,11 @@
 function googleLogin() {
 
     //TODO: Add functionality
+}
+
+function facebookLogin() { 
+
+  //TODO: Add functionality
 }
 
 function switchPage() {
@@ -91,11 +93,6 @@ function checkLoginState() {
     });
 
     window.location.href = "main.html";
-}
-
-function facebookLogin() { 
-
-    //TODO: Add functionality
 }
 
 function appyLogin() {
