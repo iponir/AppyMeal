@@ -1,0 +1,93 @@
+<link rel="stylesheet" type="text/css" href="index.css">
+<script src="index.js"></script>
+
+<div id="headerBar">
+	<span id="backButton" onclick="goHome()">‹</span><span id="pageTitle">Your Order</span>
+</div>
+
+<div id="main">
+	<h3>To-Go Order</h3>
+	<table>
+		<tr>
+			<td><img id="location" src="location.png"></td>
+			<td>
+				Pancake House<br>
+				1911 Grayson Hwy, Grayson, GA 30017 <br>
+				1.2 mi
+			<td>
+		</tr>
+	</table>
+
+	<p id="pickupTime">Ready for pick up in 25 - 30 mins</p>
+
+	<hr>
+
+	<h3>Your Order</h3><span id="addItem">+ Add Item</span>
+	<table id="order">
+		<tr>
+			<td>1</td>
+			<td>
+				Blueberry Pancake<br>
+				Whipped Cream
+			</td>
+			<td>$10.25</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>
+				Walnut Pancake<br>
+				Whipped Cream
+			</td>
+			<td>$10.25</td>
+		</tr>
+	</table>
+
+	<h3>Tip</h3>
+	<span class="tipAmount">10%</span>
+	<span class="tipAmount" selected="true">15%</span>
+	<span class="tipAmount">20%</span>
+	<span class="tipAmount">25%</span>
+	<span class="tipAmount">Other</span>
+
+	<table>
+		<tr>
+			<td>Subtotal</td>
+			<td>$20.50</td>
+		</tr>
+		<tr class="discount">
+			<td>AppyMeal discount</td>
+			<td>-$1.02</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<table>
+		<tr>
+			<td>Tip</td>
+			<td>$3.07</td>
+		</tr>
+		<tr>
+			<td>Taxes</td>
+			<td>$1.44</td>
+		</tr>
+		<tr class="total">
+			<td>Total</td>
+			<td>$23.99</td>
+		</tr>
+	</table>
+
+	<hr>
+
+	<table id="payment">
+		<tr>
+			<td><img src="creditCard.png"></td>
+			<td><span id="cardNumber">⦁⦁⦁⦁ 4231</span></td>
+			<td><span id="changePayment">Change</span></td>
+		</tr>
+	</table>
+</div>
+
+<div id="placeOrder">
+	Place Order - To Pick Up
+</div>

@@ -12,12 +12,6 @@
 @font-face {
 	font-family: GillSans;
 	src: url(/fonts/GillSansBold.ttf) format('truetype');
-	font-style: bold;
-}
-
-@font-face {
-	font-family: GillSans;
-	src: url(/fonts/GillSansBold.ttf) format('truetype');
 	font-weight: bold;
 }
 

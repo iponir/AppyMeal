@@ -9,3 +9,15 @@ function goHome(){
 	screen.innerHTML = "";
 	screen.appendChild(home);
 }
+
+// Navigate to the cart
+function goToCart(){
+	var screen = document.getElementById("screen");
+
+	// Load the cart
+	var cart = modularjs.newModule("cart", {});
+
+	// Display the cart
+	screen.innerHTML = "";
+	screen.appendChild(cart);
+}

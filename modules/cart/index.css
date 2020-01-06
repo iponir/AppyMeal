@@ -1,0 +1,111 @@
+h3 {
+	text-align: left;
+	margin: 20px;
+}
+
+table {
+	text-align: left;
+	width: calc(100% - 2 * 20px);
+	border-spacing: 10px;
+	border-collapse: separate;
+	margin: -10px calc(20px - 10px);
+}
+
+hr{
+	margin: 20px;
+	border: 1px solid lightgray;
+}
+
+td:last-child {
+	text-align: right;
+}
+
+.tipAmount {
+	color: #be1e2d;
+	display: inline-block;
+	padding: 5px;
+	border: 1px solid #be1e2d;
+	font-weight: bold;
+	margin: 0 10px 20px 10px;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+.tipAmount:hover, .tipAmount[selected="true"] {
+	color: white;
+	background: #be1e2d;
+	cursor: pointer;
+}
+
+.discount {
+	color: #be1e2d;
+}
+
+.total {
+	font-weight: bold;
+}
+
+#main {
+	height: calc(100% - 2 * 60px);
+	border-radius: 0;
+}
+
+#location {
+	width: 100px;
+	padding: 0;
+	border-radius: 5px;
+}
+
+#pickupTime {
+	color: #be1e2d;
+	margin: 20px 0;
+}
+
+#addItem {
+	float: right;
+	color: #be1e2d;
+	margin-right: 20px;
+	margin-top: -42px;
+	font-weight: bold;
+}
+
+#payment img:first-child {
+	width: 50px;
+}
+
+#payment img:second-child {
+	width: 25px;
+}
+
+#changePayment {
+	padding: 5px;
+	border: 1px solid #be1e2d;
+	background: #be1e2d;
+	color: white;
+	border-radius: 5px;
+	transition: 0.5s;
+}
+
+#changePayment:hover {
+	color: #be1e2d;
+	cursor: pointer;
+	background: white;
+
+}
+
+#placeOrder {
+	display: block;
+	color: white;
+	background: #be1e2d;
+	border-radius: 0 0 30px 30px;
+	border-top: 1px solid #be1e2d;
+	line-height: calc(60px - 1px);
+	font-size: 1.1em;
+	transition: 0.5s;
+}
+
+#placeOrder:hover {
+	cursor: pointer;
+	background: white;
+	color: #be1e2d;
+}
