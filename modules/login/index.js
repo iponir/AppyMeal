@@ -9,10 +9,12 @@ function login(){
 			"onFinishedLoading" : "goHome"
 		}
 	);
+	loadingPage.style["clip-path"] = "inset(0 0 0 100%)";
+	loadingPage.style.transform = "translateY(-100%)";
 
-	// Clear the screen, then append the loading page
-	screen.firstElementChild.remove();
+	// Transition to the loading page
 	screen.appendChild(loadingPage);
+	animatePages();
 
 	// Return false to prevent page redirect
 	return false;

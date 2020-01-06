@@ -12,6 +12,7 @@ body {
 	margin: calc((100vh - 780px) / 2) auto;
 	background: black;
 	border-radius: 40px 40px 40px 40px;
+	overflow: hidden;
 }
 
 a {
@@ -95,6 +96,8 @@ input[type="submit"]:hover {
 	width: 100%;
 	border-radius: 30px;
 	font-family: GillSans;
+	clip-path: inset(0 0 0 0);
+	transition: clip-path 0.5s;
 }
 
 #headerBar {
