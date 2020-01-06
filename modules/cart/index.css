@@ -5,7 +5,7 @@ h3 {
 
 table {
 	text-align: left;
-	width: calc(100% - 2 * 20px);
+	width: calc(100% - 2 * 10px);
 	border-spacing: 10px;
 	border-collapse: separate;
 	margin: -10px calc(20px - 10px);

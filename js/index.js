@@ -27,7 +27,7 @@ function animatePages(){
 					pages[0].style["clip-path"] = "inset(0 100% 0 0)";
 					pages[1].style["clip-path"] = "inset(0 0 0 0)";
 				},
-				100
+				200
 			);
 			setTimeout(
 				function(){
@@ -35,7 +35,7 @@ function animatePages(){
 					pages[1].style.transform = "unset";
 					document.body.style["pointer-events"] = "unset";
 				},
-				500
+				1000
 			);
 		}
 	);
