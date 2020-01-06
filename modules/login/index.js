@@ -19,3 +19,10 @@ function login(){
 	// Return false to prevent page redirect
 	return false;
 }
+
+// Append the login page to pages
+modularjs.doOnceLoaded.push(
+	function(){
+		pages.login = modularjs.mainDoc.querySelector('[name="login"]');
+	}
+);

@@ -1,6 +1,19 @@
 // Animate the loading blocks
 function load(loadingBlocks, index){
 
+	// Preload all pages
+	var pageNames = Object.keys(pages);
+	for(var i = 0; i < pageNames.length; i++){
+		var name = pageNames[i];
+		
+		// If the page has already been preloaded, continue
+		if(pages[name]){
+			continue;
+		}
+
+		pages[name] = modularjs.newModule(name, {});
+	}
+
 	// If loadingBlocks is undefined, gather the loading blocks
 	if(!loadingBlocks){
 		var loadingBlocks = modularjs.mainDoc.getElementsByClassName("loadingBlock");
