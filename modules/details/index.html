@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text-css" href="index.css">
+<script>
+	var menu = {{menu}};
+</script>
+<script src="index.js"></script>
+
+<div id="headerBar">
+	<span id="backButton" onclick="goHome()">‹</span><span id="pageTitle">Restaurant Details</span>
+</div>
+
+<div id="main">
+	<div id="image" style="background: url('{{image}}') center/cover"></div>
+
+	<h1>{{name}}<span id="distance">1.2 mi</span></h1>
+	<h2 id="type">Breakfast</h2>
+	<div class="rating" >★ 4.5</div>
+	<div id="linkArea">
+		<a>Location and Hours</a>
+		<a id="moreInfo">More info ›</a>
+	</div>
+
+	<h2>Menu</h2>
+	<table id="menu"></table>
+</div>

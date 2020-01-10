@@ -1,0 +1,65 @@
+h1 {
+	margin: 20px 20px 0 20px;
+	text-align: left;
+}
+
+h2 {
+	text-align: left;
+	margin: 20px;
+}
+
+h3, p {
+	margin: 0;
+}
+
+table {
+	text-align: left;
+	width: calc(100% - 2 * 20px);
+	margin: -10px 20px;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 10px 0;
+	border-bottom: 1px solid dimgray;
+}
+
+td:first-child {
+	padding-right: 5px;
+}
+
+td:last-child {
+	padding-left: 5px;
+}
+
+.rating {
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#image {
+	display: block;
+	height: 300px;
+	width: 100%;
+}
+
+#distance {
+	font-size: 12pt;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+#type {
+	font-weight: normal;
+	text-align: left;
+	margin: 0 20px;
+}
+
+#linkArea {
+	text-align: left;
+	margin: 10px 20px;
+}
+
+#moreInfo {
+	float: right;
+}

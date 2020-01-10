@@ -68,3 +68,40 @@ function goToCart(){
 	screen.appendChild(cart);
 	animatePages();
 }
+
+// Navigate to a particular restaurant's detail page based on the provided restaurant Id
+function goToDetails(restaurantId){
+	var screen = document.getElementById("screen");
+	var xhttp = new XMLHttpRequest();
+	var url = encodeURI("/menus/" + restaurantId);
+	var method = "GET";
+
+	// Construct the details page based on the retrieved menu information
+	xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			var menu = JSON.parse(this.responseText);
+			var restaurantInfo = {
+				"name" : restaurantId.split("#")[0],
+				"image" : "/img/restaurants/" + restaurantId + "/food1.jpg",
+				"menu" : JSON.stringify(menu)
+			};
+
+			// Load the home page
+			var details = modularjs.newModule("details", restaurantInfo);
+			details.style["clip-path"] = "inset(0 0 0 100%)";
+			details.style.transform = "translateY(-100%)";
+
+			// Insert the details page
+			screen.appendChild(details);
+			animatePages();
+		}else if(this.readyState == 4){
+			alert("There was an error loading the menu");
+			throw this.responseText;
+		}
+	}
+
+	// Retrieve the restaurant's menu
+	xhttp.open(method, url, true);
+	xhttp.setRequestHeader("accept", "application/json");
+	xhttp.send();
+}

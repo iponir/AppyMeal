@@ -1,0 +1,10 @@
+{
+	"Hot Wings" : {
+		"description" : "8 fried chicken wings tossed in our signature Buffalo sauce. Comes with a side of french fries.",
+		"price" : 9.99
+	},
+	"Lemon Pepper Wings" : {
+		"description" : "8 fried chicken wings tossed in our signature lemon pepper sauce. Comes with a side of french fries.",
+		"price" : 9.99
+	}
+}

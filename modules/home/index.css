@@ -24,22 +24,13 @@ p {
 	border-radius: 5px;
 }
 
-.rating {
-	display: block;
-	text-align: center;
-	padding: 2px;
-	background: rgba(0, 0, 0, 0.7);
-	margin: 5px;
-	width: 50px;
-	border-radius: 5px;
-	float: right;
-	color: white;
-	line-height: 1.5em;
-}
-
 .like {
 	float: right;
 	margin-top: -60px;
+}
+
+.rating {
+	float: right;
 }
 
 .menuButton {
@@ -49,8 +40,15 @@ p {
 	width: 85px;
 	text-align: center;
 	color: white;
+	border: 1px solid #be1e2d;
 	border-radius: 5px;
 	float: right;
 	padding-bottom: 2px;
 	margin-top: -16px;
+}
+
+.menuButton:hover {
+	cursor: pointer;
+	background: white;
+	color: #be1e2d;
 }

@@ -61,6 +61,18 @@ input[type="submit"]:hover {
 	cursor: pointer;
 }
 
+.rating {
+	display: block;
+	text-align: center;
+	padding: 2px;
+	background: rgba(0, 0, 0, 0.7);
+	margin: 5px;
+	width: 50px;
+	border-radius: 5px;
+	color: white;
+	line-height: 1.5em;
+}
+
 #speaker {
 	display: inline-block;
 	height: 10px;
