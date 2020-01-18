@@ -1,6 +1,7 @@
 pages = {
 	"login" : undefined,
 	"home" : undefined,
+	"menu" : undefined,
 	"cart" : undefined
 };
 
@@ -104,4 +105,18 @@ function goToDetails(restaurantId){
 	xhttp.open(method, url, true);
 	xhttp.setRequestHeader("accept", "application/json");
 	xhttp.send();
+}
+
+// Open the menu
+function showMenu(){
+	var screen = document.getElementById("screen");
+
+	// Load the menu
+	var menu = pages.menu;
+	menu.style["clip-path"] = "inset(0 0 0 100%)";
+	menu.style.transform = "translateY(-100%)";
+
+	// Display the menu
+	screen.appendChild(menu);
+	animatePages();
 }
