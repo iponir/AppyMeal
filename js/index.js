@@ -103,21 +103,9 @@ function appyLogin() {
     
     //Used by access through the redis-cli > ssh appymeal.ga -> $redis-cli
     var redis = require('redis');
-    var client = redis.createClient(8080, "localhost");
+    var client = redis.createClient(8080 "localhost");
 
     client.on('connect', function() {
         console.log('connected');
     })
 }
-
-function appyLoginNode() {
-    	//Access through the redis-cli > ssh appymeal.ga -> $redis-cli
-    	var client = redis.createClient(8080, "localhost");
-    	
-    	client.on('connect', function() {
-        	console.log('connected');
-    });
-}
-
-
-//module.export = ;

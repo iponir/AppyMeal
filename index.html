@@ -1,13 +1,23 @@
 <html>
 	<head>
-    	<meta name="google-signin-client_id" content="589433053841-5p63ee18j0p4gju48lnusclrvg6fnp8k.apps.googleusercontent.com">
+    	<meta name="google-signin-client_id" content="589433053841-c8m7ml5taft4v7cd9du80sltl4p9f08v.apps.googleusercontent.com">
 		<link type="text/css" href="css/index.css">
-		<script src="index.js"></script>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
-
-	<body background-color="#FF6601">
-	  	<script>	
+	
+	<body>
+		<!--<script src="index.js"></script>-->
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<script> 
+	    		function appyLogin() {
+            		//Access through the redis-cli > ssh appymeal.ga -> $redis-cli
+		  	var client = redis.createClient(8080, "localhost");
+		    	
+		  	client.on('connect', function() {
+			console.log('connected');
+    			   });
+			}
+		</script>
+	  	<!--<script>	
 			window.fbAsyncInit = function() {
 				FB.init({
 				appId      : '688594048297404',
@@ -28,7 +38,7 @@
 				js.src="https://connect.facebook.net/en_US/sdk.js";
 				fjs.parentNode.insertBefore(js, fjs);
 				}(document,'script','facebook-jssdk'));
-		</script> 
+		</script>-->
 		<div id="background"></div>
 		<div id="main">
 			<div id="loginType">
@@ -43,12 +53,13 @@
 					<img src="img/facebook.svg">
 				</div> -->
 				
-				<fb:login-button 
+				<!--<fb:login-button 
   					scope="public_profile,email"
  					onlogin="checkLoginState();">
-				</fb:login-button>
-				
-				<div class="button" onclick="appyLoginNode()"> APPYMeal </div>
+				</fb:login-button>-->
+
+				<button class="btn" type=button onclick="appyLogin()"> 					AppyMeal Login 
+				</button>
 		</div>
 	</body>
 </html>
