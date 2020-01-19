@@ -1,20 +1,13 @@
-<!DOCTYPE html>
 <html>
 	<head>
     	<meta name="google-signin-client_id" content="589433053841-5p63ee18j0p4gju48lnusclrvg6fnp8k.apps.googleusercontent.com">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<script src="js/index.js"></script>
+		<link type="text/css" href="css/index.css">
+		<script src="index.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
-		<script data-main="js/config.js" src="js/require.js"></script>
-		<script>
-			require(['config'], function() {
-
-			});
-		</script>
 	</head>
 
 	<body background-color="#FF6601">
-		<script>	
+	  	<script>	
 			window.fbAsyncInit = function() {
 				FB.init({
 				appId      : '688594048297404',
@@ -28,41 +21,34 @@
 				});
 			};
 
-			(function(d, s, id){
+			(function(d, s, id) {
 				var js, fjs=d.getElementsByTagName(s)[0];
 				if (d.getElementById(id)) {return;}
 				js=d.createElement(s); js.id=id;
 				js.src="https://connect.facebook.net/en_US/sdk.js";
 				fjs.parentNode.insertBefore(js, fjs);
 				}(document,'script','facebook-jssdk'));
-		</script>
+		</script> 
 		<div id="background"></div>
 		<div id="main">
 			<div id="loginType">
-				<div class="button" onclick="googleLogin()">
+				<!-- <div class="button" onclick="googleLogin()">
 					<img src="img/google.svg">
-				</div>
-				<!--
+				</div> -->
+				
 				<div class="g-signin2" data-onsuccess="onSignIn" data-longtitle="true">
 				</div>
-				-->
-				<div class="button" onclick="facebookLogin()">
+				
+				<!-- <div class="button" onclick="facebookLogin()">
 					<img src="img/facebook.svg">
-				</div>
-				<!--
+				</div> -->
+				
 				<fb:login-button 
   					scope="public_profile,email"
  					onlogin="checkLoginState();">
 				</fb:login-button>
-				-->
-				<div class="button" onclick="appyLogin()"> APPYMeal </div>
-			</div>
-			<div id="googleLogin">
-			</div>
-			<div id="facebookLogin">
-			</div>
-			<div id="appyLogin">
-			</div>
+				
+				<div class="button" onclick="appyLoginNode()"> APPYMeal </div>
 		</div>
 	</body>
 </html>

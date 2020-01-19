@@ -1,0 +1,18 @@
+{
+  "name": "appy_meal_app",
+  "version": "1.0.0",
+  "description": "AppyMeal implementaion of Node.js on Docker",
+  "author": "Ishtyaq Ponir <ishtyaqponir@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "method-override": "^3.0.0",
+    "node": "^13.3.0",
+    "redis": "^2.8.0"
+  }
+}
