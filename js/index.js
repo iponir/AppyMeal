@@ -2,6 +2,7 @@ pages = {
 	"login" : undefined,
 	"home" : undefined,
 	"menu" : undefined,
+	"menuItem" : undefined,
 	"cart" : undefined
 };
 

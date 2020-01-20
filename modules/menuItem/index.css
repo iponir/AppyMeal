@@ -1,0 +1,76 @@
+h2 {
+	text-align: left;
+}
+
+p {
+	text-align: left;
+}
+
+h3 {
+	color: white;
+	background: #9b9b9b;
+	margin-left: -20px;
+	padding: 0 20px;
+	width: calc(100% + 2 * 20px);
+	line-height: 2em;
+	text-align: left;
+}
+
+form {
+	text-align: left;
+}
+
+label {
+	margin: 0 20px;
+	display: inline-block;
+	width: unset;
+	line-height: 1.5em;
+	vertical-align: middle;
+}
+
+input[type="radio"] {
+	vertical-align: top;
+}
+
+input[type="submit"] {
+	margin: 20px auto;
+	width: 100%;
+}
+
+#main > * {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#quantityControls {
+	text-align: center;
+}
+
+#removeItem, #addItem {
+	display: inline-block;
+	background: #373a43;
+	border: 1px solid #373a43;
+	line-height: 40px;
+	width: 40px;
+	color: white;
+	border-radius: 50%;
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+#removeItem:hover, #addItem:hover {
+	cursor: pointer;
+	color: #373a43;
+	background: white;
+}
+
+#quantity {
+	font-size: 1.5em;
+	text-align: center;
+	width: 100px;
+	line-height: 50px;
+	display: inline-block;
+	margin-top: 50px;
+}
