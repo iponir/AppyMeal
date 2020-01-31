@@ -1,4 +1,6 @@
 {
+	"__name" : "Wing Stop",
+	"__type" : "Bar Food",
 	"Hot Wings" : {
 		"description" : "8 fried chicken wings tossed in our signature Buffalo sauce. Comes with a side of french fries.",
 		"price" : 9.99

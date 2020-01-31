@@ -33,8 +33,23 @@ input[type="radio"] {
 }
 
 input[type="submit"] {
-	margin: 20px auto;
+	margin: 20px auto 0 auto;
 	width: 100%;
+	line-height: 60px;
+	border-radius: 0 0 30px 30px;
+	padding: 0;
+	border-top: 1px solid #be1e2d;
+}
+
+input[type="submit"]:hover {
+	background: white;
+	color: #be1e2d;
+}
+
+#main {
+	height: calc(100% - 90px - 120px);
+	margin-bottom: 90px;
+	border-radius: 0;
 }
 
 #main > * {
@@ -44,6 +59,13 @@ input[type="submit"] {
 
 #quantityControls {
 	text-align: center;
+	position: absolute;
+	bottom: 106px;
+	width: 360px;
+	margin-left: -20px;
+	background: white;
+	border-top: 1px solid #be1e2d;
+	border-radius: 0 0 30px 30px;
 }
 
 #removeItem, #addItem {
@@ -57,7 +79,8 @@ input[type="submit"] {
 	font-size: 1.5em;
 	text-align: center;
 	font-weight: bold;
-	margin-top: 50px;
+	margin-top: 20px;
+	transition: 0.5s;
 }
 
 #removeItem:hover, #addItem:hover {
@@ -72,5 +95,5 @@ input[type="submit"] {
 	width: 100px;
 	line-height: 50px;
 	display: inline-block;
-	margin-top: 50px;
+	margin-top: 20px;
 }

@@ -2,7 +2,6 @@ pages = {
 	"login" : undefined,
 	"home" : undefined,
 	"menu" : undefined,
-	"menuItem" : undefined,
 	"cart" : undefined
 };
 
@@ -83,8 +82,10 @@ function goToDetails(restaurantId){
 		if(this.readyState == 4 && this.status == 200){
 			var menu = JSON.parse(this.responseText);
 			var restaurantInfo = {
-				"name" : restaurantId.split("#")[0],
+				"restaurantId" : restaurantId,
+				"name" : menu.__name,
 				"image" : "/img/restaurants/" + restaurantId + "/food1.jpg",
+				"type" : menu.__type,
 				"menu" : JSON.stringify(menu)
 			};
 
@@ -106,6 +107,27 @@ function goToDetails(restaurantId){
 	xhttp.open(method, url, true);
 	xhttp.setRequestHeader("accept", "application/json");
 	xhttp.send();
+}
+
+// Show the customization info for a food item
+function showMenuItem(restaurantId, itemName, menuItem){
+	var screen = document.getElementById("screen");
+
+	// Load the menu item
+	var itemInfo = {
+		"restaurantId" : restaurantId,
+		"name" : itemName,
+		"description" : menuItem.description,
+		"options" : menuItem.options
+	}
+	console.log(itemInfo);
+	var menuItem = modularjs.newModule("menuItem", itemInfo);
+	menuItem.style["clip-path"] = "inset(0 0 0 100%)";
+	menuItem.style.transform = "translateY(-100%)";
+
+	// Display the menu item
+	screen.appendChild(menuItem);
+	animatePages();
 }
 
 // Open the menu

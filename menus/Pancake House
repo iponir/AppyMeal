@@ -1,11 +1,19 @@
 {
+	"__name" : "Pancake House",
+	"__type" : "Breakfast",
 	"Apple Pancake" : {
 		"description" : "Oven baked with fresh granny smith apples and pure Sinkiangcinnamon glaze",
 		"price" : 13.85
 	},
 	"Dutch Baby" : {
 		"description" : "Oven baked. Served with whipped butter, lemon and powdered sugar.",
-		"price" : 12.45
+		"price" : 12.45,
+		"options" : {
+			"Whipped Cream" : [
+				"No Whipped Cream",
+				"With Whipped Cream"
+			]
+		}
 	},
 	"Fresh Vegetarian Omelette" : {
 		"description" : "Ourfluffy omelette filled with fresh broccoli, fresh tomatoes, fresh mushrooms, and aged cheddar cheese.",
