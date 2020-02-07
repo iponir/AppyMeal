@@ -104,8 +104,8 @@ function goToDetails(restaurantId){
 	}
 
 	// Retrieve the restaurant's menu
+	xhttp.overrideMimeType("application/json");
 	xhttp.open(method, url, true);
-	xhttp.setRequestHeader("accept", "application/json");
 	xhttp.send();
 }
 
@@ -118,9 +118,9 @@ function showMenuItem(restaurantId, itemName, menuItem){
 		"restaurantId" : restaurantId,
 		"name" : itemName,
 		"description" : menuItem.description,
-		"options" : menuItem.options
+		"options" : menuItem.options,
+		"addons" : menuItem.addons
 	}
-	console.log(itemInfo);
 	var menuItem = modularjs.newModule("menuItem", itemInfo);
 	menuItem.style["clip-path"] = "inset(0 0 0 100%)";
 	menuItem.style.transform = "translateY(-100%)";

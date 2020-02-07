@@ -20,6 +20,15 @@ form {
 	text-align: left;
 }
 
+textarea {
+	width: 100%;
+	height: 100px;
+	resize: none;
+	border: 1px solid #9b9b9b;
+	font-size: 1.5em;
+	margin-bottom: 20px;
+}
+
 label {
 	margin: 0 20px;
 	display: inline-block;
@@ -28,7 +37,7 @@ label {
 	vertical-align: middle;
 }
 
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
 	vertical-align: top;
 }
 
@@ -47,8 +56,7 @@ input[type="submit"]:hover {
 }
 
 #main {
-	height: calc(100% - 90px - 120px);
-	margin-bottom: 90px;
+	height: calc(100% - 60px - 152px);
 	border-radius: 0;
 }
 
@@ -59,10 +67,8 @@ input[type="submit"]:hover {
 
 #quantityControls {
 	text-align: center;
-	position: absolute;
-	bottom: 106px;
-	width: 360px;
-	margin-left: -20px;
+	width: 100%;
+	margin-left: 0;
 	background: white;
 	border-top: 1px solid #be1e2d;
 	border-radius: 0 0 30px 30px;

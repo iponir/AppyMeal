@@ -14,6 +14,18 @@ function generateForm(){
 		}
 	}
 
-	// Add optionsHTML to the form
-	form.innerHTML = optionsHTML + form.innerHTML;
+	// Iterate through addons and construct addonsHTML
+	var addonsHTML = '';
+	for(var addonName in addons){
+		var currentAddon = addons[addonName];
+		addonsHTML += '<h3>' + addonName + '</h3>';
+		
+		// Iterate through the current addon choices
+		for(var i = 0; i < currentAddon.length; i++){
+			addonsHTML += '<input type="checkbox" name="' + addonName + '" value="' + currentAddon[i] + '"><label>' + currentAddon[i] + '</label><br>';
+		}
+	}
+
+	// Add optionsHTML and addonsHTML to the form
+	form.innerHTML = optionsHTML + addonsHTML + form.innerHTML;
 }

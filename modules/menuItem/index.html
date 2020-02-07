@@ -2,6 +2,7 @@
 <script src="index.js"></script>
 <script>
 	options = {{options}};
+	addons = {{addons}};
 	generateForm();
 </script>
 
@@ -13,9 +14,12 @@
 	<h2>{{name}}</h2>
 	<p>{{description}}</p>
 	<form id="orderCustomization">
-		<div id="quantityControls">
-			<span id="removeItem">−</span><span id="quantity">1</span><span id="addItem">+</span>
-			<input type="submit" value="Add Item">
-		</div>
+		<h3>Special Instructions</h3>
+		<textarea name="specialInstructions"></textarea>
 	</form>
+</div>
+
+<div id="quantityControls">
+	<span id="removeItem">−</span><span id="quantity">1</span><span id="addItem">+</span>
+	<input form="orderCustomization" type="submit" value="Add Item">
 </div>
