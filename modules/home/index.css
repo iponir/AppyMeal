@@ -18,6 +18,10 @@ p {
 	margin: 5px 20px 55px 20px;
 }
 
+.restaurant:hover {
+	cursor: pointer;
+}
+
 .preview {
 	display: block;
 	height: 300px;
@@ -51,4 +55,8 @@ p {
 	cursor: pointer;
 	background: white;
 	color: #be1e2d;
+}
+
+#location:hover {
+	cursor: pointer;
 }
