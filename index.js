@@ -27,11 +27,12 @@ function googleLogin() {
 }
 
 function switchPage() {
-    window.location.href="main.html";
+    //window.location.href="main.html";
+    return res.redirect('/main');
 }
 
 function onSignIn(googleUser) {
-
+    switchPage();
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
