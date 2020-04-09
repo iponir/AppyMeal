@@ -6,13 +6,18 @@ html {
 }
 
 body {
+	margin: 0;
+	height: 100%;
 	text-align: center;
+	overflow: hidden;
+	font-family: GillSans;
+	/*
 	width: 360px;
 	padding: 30px 10px 10px 10px;
 	margin: calc((100vh - 780px) / 2) auto;
 	background: black;
 	border-radius: 40px 40px 40px 40px;
-	overflow: hidden;
+	*/
 }
 
 a {
@@ -108,7 +113,6 @@ input[type="submit"]:hover {
 	height: 100%;
 	width: 100%;
 	border-radius: 30px;
-	font-family: GillSans;
 	clip-path: inset(0 0 0 0);
 	transition: clip-path 0.5s;
 }
@@ -121,7 +125,7 @@ input[type="submit"]:hover {
 	background: #be1e2d;
 	color: white;
 	line-height: 60px;
-	border-radius: 30px 30px 0 0;
+	/*border-radius: 30px 30px 0 0;*/
 	font-weight: bold;
 }
 
@@ -148,7 +152,7 @@ input[type="submit"]:hover {
 	background: white;
 	display: block;
 	height: calc(100% - 60px);
-	border-radius: 0 0 30px 30px;
+	/*border-radius: 0 0 30px 30px;*/
 	overflow: auto;
 	scrollbar-width: none;
 }
@@ -165,7 +169,7 @@ input[type="submit"]:hover {
 	background: #373a43;
 	color: white;
 	line-height: 60px;
-	border-radius: 30px 30px 0 0;
+	/*border-radius: 30px 30px 0 0;*/
 }
 
 #menuButton {

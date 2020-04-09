@@ -17,3 +17,8 @@ p {
 	margin: 25px;
 	width: calc(100% - 25px);
 }
+
+#loginForm {
+	max-width: 500px;
+	margin: auto;
+}
