@@ -1,3 +1,16 @@
+// Populate the images section with the provided images
+function populateImages(images){
+	var imagesDiv = document.getElementById("images");
+	var newHTML = '<div id="imagesBackground" style="background: url(\'' + images[0] + '\') center/cover"></div>';
+	
+	// Construct newHTML
+	for(var i = 0; i < images.length; i++){
+		newHTML += '<div class="image" style="background: url(\'' + images[i] + '\') center/cover"></div>';
+	}
+
+	imagesDiv.innerHTML += newHTML;
+}
+
 // Populate the menu based on the provided menu information
 function populateMenu(menu){
 	var menuElement = document.getElementById("menu").firstElementChild;
@@ -20,4 +33,5 @@ function populateMenu(menu){
 	}
 }
 
+populateImages(images);
 populateMenu(menu);

@@ -81,10 +81,12 @@ function goToDetails(restaurantId){
 	xhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200){
 			var menu = JSON.parse(this.responseText);
+
+			/*TODO: get list of images from payload sent by the API*/
 			var restaurantInfo = {
 				"restaurantId" : restaurantId,
 				"name" : menu.__name,
-				"image" : "/img/restaurants/" + restaurantId + "/food1.jpg",
+				"images" : JSON.stringify(["/img/restaurants/" + restaurantId + "/food1.jpg"]),
 				"type" : menu.__type,
 				"menu" : JSON.stringify(menu)
 			};
