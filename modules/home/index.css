@@ -13,9 +13,10 @@ p {
 
 .restaurant {
 	text-align: left;
-	display: block;
+	display: inline-block;
 	width: calc(100% - 2 * 20px);
 	margin: 5px 20px 55px 20px;
+	max-width: 350px;
 }
 
 .restaurant:hover {
