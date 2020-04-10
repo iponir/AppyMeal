@@ -1,3 +1,7 @@
+body {
+	background: white;
+}
+
 h1 {
 	margin: 20px 20px 0 20px;
 	text-align: left;
@@ -41,10 +45,34 @@ td:last-child {
 	margin-top: 10px;
 }
 
-#image {
-	display: block;
-	height: 300px;
+.image {
+	display: inline-block;
 	width: 100%;
+	height: 300px;
+	max-width: 500px;
+	z-index: 1;
+	position: relative;
+	top: -315px;
+}
+
+#imagesBackground {
+	display: block;
+	width: 100%;
+	height: 330px;
+	filter: blur(8px);
+	margin-top: -15px;
+	margin-left: -15px;
+}
+
+#images {
+	width: calc(100% + 30px);
+	max-height: 300px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scrollbar-width: thin;
+	scrollbar-color: #be1e2d white;
+	white-space: nowrap;
+	margin-left: -15px;
 }
 
 #distance {
