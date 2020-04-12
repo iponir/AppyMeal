@@ -52,7 +52,6 @@ td:last-child {
 	max-width: 500px;
 	z-index: 1;
 	position: relative;
-	top: -315px;
 }
 
 #imagesBackground {
@@ -60,8 +59,7 @@ td:last-child {
 	width: 100%;
 	height: 330px;
 	filter: blur(8px);
-	margin-top: -15px;
-	margin-left: -15px;
+	margin: -15px 0 -315px -15px;
 }
 
 #images {
@@ -69,8 +67,6 @@ td:last-child {
 	max-height: 300px;
 	overflow-x: auto;
 	overflow-y: hidden;
-	scrollbar-width: thin;
-	scrollbar-color: #be1e2d white;
 	white-space: nowrap;
 	margin-left: -15px;
 }

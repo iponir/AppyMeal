@@ -1,5 +1,20 @@
 @import url("/css/fonts.css");
 
+* {
+	font-family: GillSans;
+	scrollbar-width: thin;
+	scrollbar-color: #be1e2d white;
+}
+
+*::-webkit-scrollbar {
+	height: 6px;
+	background-color: white;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #be1e2d;
+}
+
 html {
 	height: 100vh;
 	background: #222;
@@ -10,7 +25,6 @@ body {
 	height: 100%;
 	text-align: center;
 	overflow: hidden;
-	font-family: GillSans;
 	/*
 	width: 360px;
 	padding: 30px 10px 10px 10px;
@@ -159,13 +173,16 @@ input[type="submit"]:hover {
 	display: block;
 	height: calc(100% - 60px);
 	/*border-radius: 0 0 30px 30px;*/
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	scrollbar-width: none;
 }
 
+/*
 #main::-webkit-scrollbar {
 	display: none;
 }
+*/
 
 #navBar {
 	text-align: left;

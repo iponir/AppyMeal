@@ -86,7 +86,9 @@ function goToDetails(restaurantId){
 			var restaurantInfo = {
 				"restaurantId" : restaurantId,
 				"name" : menu.__name,
-				"images" : JSON.stringify(["/img/restaurants/" + restaurantId + "/food1.jpg"]),
+				"images" : JSON.stringify(
+					["/img/restaurants/" + restaurantId + "/food1.jpg", "/img/restaurants/" + restaurantId + "/food2.jpg"]
+				),
 				"type" : menu.__type,
 				"menu" : JSON.stringify(menu)
 			};
