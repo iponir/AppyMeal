@@ -12,8 +12,16 @@ h3 {
 	margin-left: -20px;
 	padding: 0 20px;
 	width: calc(100% + 2 * 20px);
+	max-width: 500px;
 	line-height: 2em;
 	text-align: left;
+}
+
+@media(min-width: 500px) {
+	h3 {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 form {
@@ -45,7 +53,8 @@ input[type="submit"] {
 	margin: 20px auto 0 auto;
 	width: 100%;
 	line-height: 60px;
-	border-radius: 0 0 30px 30px;
+	/* border-radius: 0 0 30px 30px; */
+	border-radius: 0;
 	padding: 0;
 	border-top: 1px solid #be1e2d;
 }
@@ -63,6 +72,15 @@ input[type="submit"]:hover {
 #main > * {
 	margin-left: 20px;
 	margin-right: 20px;
+}
+
+@media(min-width: 500px){
+	#main > * {
+		width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 }
 
 #quantityControls {
@@ -102,4 +120,12 @@ input[type="submit"]:hover {
 	line-height: 50px;
 	display: inline-block;
 	margin-top: 20px;
+}
+
+@media(min-width: 500px) {
+	.headerContainer {
+		width: 100vw;
+		margin-left: calc(-50vw + 250px);
+		background-color: #9b9b9b;
+	}
 }

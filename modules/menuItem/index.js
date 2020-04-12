@@ -6,7 +6,7 @@ function generateForm(){
 	var optionsHTML = '';
 	for(var optionName in options){
 		var currentOption = options[optionName];
-		optionsHTML += '<h3>' + optionName + '</h3>';
+		optionsHTML += '<div class="headerContainer"><h3>' + optionName + '</h3></div>';
 		
 		// Iterate through the current option choices
 		for(var i = 0; i < currentOption.length; i++){
@@ -18,7 +18,7 @@ function generateForm(){
 	var addonsHTML = '';
 	for(var addonName in addons){
 		var currentAddon = addons[addonName];
-		addonsHTML += '<h3>' + addonName + '</h3>';
+		addonsHTML += '<div class="headerContainer"><h3>' + addonName + '</h3></div>';
 		
 		// Iterate through the current addon choices
 		for(var i = 0; i < currentAddon.length; i++){
