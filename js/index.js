@@ -42,6 +42,54 @@ function animatePages(){
 	);
 }
 
+// Go to the specified page and update the browser history accordingly
+function goToPage(pageURL){
+	var pageRoot = pageURL.split("?")[0];
+	var queryParams = pageURL.split("?")[1];
+
+	console.log(pageRoot);
+
+	switch(pageRoot){
+		case "login":
+			goToLogin();
+			break;
+		case "home":
+			goHome();
+			break;
+		case "cart":
+			goToCart();
+			break;
+		case "details":
+			var restaurantId = queryParams.split("=")[1];
+			goToDetails(restaurantId);
+			break;
+		default:
+			showErrorPage("404 Not Found", "Oops! We couldn't find this page!");
+	}
+
+	window.history.pushState({}, '', pageURL);
+}
+
+// Displays an error page
+function showErrorPage(httpStatusCode, errorMessage){
+	/* TODO: Implement error module */
+	document.body.innerHTML = httpStatusCode + "<br>" + errorMessage;
+}
+
+// Navigate to the login
+function goToLogin(){
+	var screen = document.getElementById("screen");
+
+	// Load the home page
+	var home = pages.home;
+	home.style["clip-path"] = "inset(0 0 0 100%)";
+	home.style.transform = "translateY(-100%)";
+
+	// Insert the home page
+	screen.appendChild(home);
+	animatePages();
+}
+
 // Navigate to the home page
 function goHome(){
 	var screen = document.getElementById("screen");

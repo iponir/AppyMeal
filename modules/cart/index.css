@@ -1,3 +1,7 @@
+body {
+	background: white;
+}
+
 h3 {
 	text-align: left;
 	margin: 20px;
@@ -48,6 +52,8 @@ td:last-child {
 #main {
 	height: calc(100% - 2 * 60px);
 	border-radius: 0;
+	max-width: 500px;
+	margin: auto;
 }
 
 #location {
@@ -98,7 +104,7 @@ td:last-child {
 	display: block;
 	color: white;
 	background: #be1e2d;
-	border-radius: 0 0 30px 30px;
+	/* border-radius: 0 0 30px 30px; */
 	border-top: 1px solid #be1e2d;
 	line-height: calc(60px - 1px);
 	font-size: 1.1em;

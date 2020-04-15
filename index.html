@@ -11,7 +11,16 @@
 		<div id="speaker"></div>
 		<div id="camera"></div>
 		<div id="screen">
-			<module name="home"></module>
+			<module name="login"></module>
 		</div>
 	</body>
+	<script>
+		// Navigate to the appropriate page
+		var pageURL = location.href.split(location.host + "/")[1];
+		if(pageURL == ""){
+			goToPage("login");
+		}else{
+			goToPage(pageURL);
+		}
+	</script>
 </html>
