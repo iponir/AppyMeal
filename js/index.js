@@ -1,3 +1,8 @@
+window.onpopstate = function(event){
+	var pageURL = location.pathname.substr(1) + location.search;
+	goToPage(pageURL, true);
+}
+
 pages = {
 	"login" : undefined,
 	"home" : undefined,
@@ -80,7 +85,7 @@ function animatePages(){
 }
 
 // Go to the specified page and update the browser history accordingly
-function goToPage(pageURL){
+function goToPage(pageURL, dontPushState){
 	var pageRoot = pageURL.split("?")[0];
 	var queryParams = pageURL.split("?")[1];
 
@@ -105,7 +110,10 @@ function goToPage(pageURL){
 			showErrorPage("404 Not Found", "Oops! We couldn't find this page!");
 	}
 
-	window.history.pushState({}, '', pageURL);
+	// If the state should be pushed, do so
+	if(!dontPushState){
+		window.history.pushState({}, '', pageURL);
+	}
 }
 
 // Displays an error page
