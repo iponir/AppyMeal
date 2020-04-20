@@ -4,7 +4,6 @@ function populateImages(images){
 	var newHTML = '<div id="imagesBackground" style="background: url(\'' + images[0] + '\') center/cover"></div>';
 	
 	// Construct newHTML
-	console.log(images);
 	for(var i = 0; i < images.length; i++){
 		newHTML += '<div class="image" style="background: url(\'' + images[i] + '\') center/cover"></div>';
 	}
@@ -36,3 +35,4 @@ function populateMenu(menu){
 
 populateImages(images);
 populateMenu(menu);
+

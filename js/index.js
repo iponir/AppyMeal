@@ -14,6 +14,43 @@ function preload(pageSpecs){
 	}
 }
 
+// Shows the loading page and executes the specified function when loading is complete
+function showLoading(functionName){
+	
+	// Check if all pages were already loaded
+	var pageNames = Object.keys(pages);
+	var alreadyLoaded = Array(pageNames.length);
+	for(var i = 0; i < pageNames.length; i++){
+		
+		// If the current page was already loaded, make note
+		if(pages[pageNames[i]]){
+			alreadyLoaded[i] = true;
+		}
+	}
+
+	// If all pages were already loaded, execute the provided function and return
+	if(!alreadyLoaded.includes(undefined)){
+		eval(functionName + "()");
+		return;
+	}
+
+	var screen = modularjs.mainDoc.getElementById("screen");
+
+	// Create the loading page
+	var loadingPage = modularjs.newModule(
+		"loading",
+		{
+			"onFinishedLoading" : functionName
+		}
+	);
+	loadingPage.style["clip-path"] = "inset(0 0 0 100%)";
+	loadingPage.style.transform = "translateY(-100%)";
+
+	// Transition to the loading page
+	screen.appendChild(loadingPage);
+	animatePages();
+}
+
 // Animate the current page's exit and the next page's entrance
 function animatePages(){
 	var pages = document.querySelectorAll('#screen > module');
@@ -51,17 +88,18 @@ function goToPage(pageURL){
 
 	switch(pageRoot){
 		case "login":
-			goToLogin();
+			showLoading("goToLogin");
 			break;
 		case "home":
-			goHome();
+			showLoading("goHome");
 			break;
 		case "cart":
-			goToCart();
+			showLoading("goToCart");
 			break;
 		case "details":
 			var restaurantId = queryParams.split("=")[1];
-			goToDetails(restaurantId);
+			var onLoadOperation = "(function(){goToDetails('" + restaurantId + "')})";
+			showLoading(onLoadOperation);
 			break;
 		default:
 			showErrorPage("404 Not Found", "Oops! We couldn't find this page!");
@@ -80,13 +118,13 @@ function showErrorPage(httpStatusCode, errorMessage){
 function goToLogin(){
 	var screen = document.getElementById("screen");
 
-	// Load the home page
-	var home = pages.home;
-	home.style["clip-path"] = "inset(0 0 0 100%)";
-	home.style.transform = "translateY(-100%)";
+	// Load the login page
+	var login = pages.login;
+	login.style["clip-path"] = "inset(0 0 0 100%)";
+	login.style.transform = "translateY(-100%)";
 
 	// Insert the home page
-	screen.appendChild(home);
+	screen.appendChild(login);
 	animatePages();
 }
 
@@ -122,7 +160,7 @@ function goToCart(){
 function goToDetails(restaurantId){
 	var screen = document.getElementById("screen");
 	var xhttp = new XMLHttpRequest();
-	var url = encodeURI("/menus/" + restaurantId);
+	var url = "/menus/" + restaurantId;
 	var method = "GET";
 
 	// Construct the details page based on the retrieved menu information

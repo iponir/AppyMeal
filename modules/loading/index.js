@@ -1,3 +1,4 @@
+
 // Animate the loading blocks
 function load(loadingBlocks, index){
 
