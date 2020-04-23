@@ -59,6 +59,17 @@ function showLoading(functionName){
 // Animate the current page's exit and the next page's entrance
 function animatePages(){
 	var pages = document.querySelectorAll('#screen > module');
+	
+	/* TODO: solve animation issues and remove workaround */
+	/* BEGIN_WORKAROUND */
+	var mostRecentPage = pages[pages.length - 1];
+	var screen = document.getElementById("screen");
+	screen.innerHTML = "";
+	screen.appendChild(mostRecentPage);
+	mostRecentPage.style = "";
+
+	return;
+	/* END_WORKAROUND */
 
 	// Disable pointer events so that this does not get triggered more than once
 	document.body.style["pointer-events"] = "none";
@@ -68,14 +79,18 @@ function animatePages(){
 			setTimeout(
 				function(){
 					pages[0].style["clip-path"] = "inset(0 100% 0 0)";
-					pages[1].style["clip-path"] = "inset(0 0 0 0)";
+					try{
+						pages[1].style["clip-path"] = "inset(0 0 0 0)";
+					}catch(e){}
 				},
 				200
 			);
 			setTimeout(
 				function(){
 					pages[0].remove();
-					pages[1].style.transform = "unset";
+					try{
+						pages[1].style.transform = "unset";
+					}catch(e){}
 					document.body.style["pointer-events"] = "unset";
 				},
 				1000
@@ -102,8 +117,13 @@ function goToPage(pageURL, dontPushState){
 			showLoading("goToCart");
 			break;
 		case "details":
-			var restaurantId = queryParams.split("=")[1];
-			var onLoadOperation = "(function(){goToDetails('" + restaurantId + "')})";
+			var restaurantId = queryParams.split("=")[1].split("#")[0];
+			var itemName = queryParams.split("#")[1];
+			var onLoadOperation = "(" +
+				"function(){" +
+					"goToDetails('" + restaurantId + "');" +
+				"}" +
+			")";
 			showLoading(onLoadOperation);
 			break;
 		default:
@@ -119,7 +139,7 @@ function goToPage(pageURL, dontPushState){
 // Displays an error page
 function showErrorPage(httpStatusCode, errorMessage){
 	/* TODO: Implement error module */
-	document.body.innerHTML = httpStatusCode + "<br>" + errorMessage;
+	document.getElementById("screen").innerHTML = httpStatusCode + "<br>" + errorMessage;
 }
 
 // Navigate to the login
@@ -226,6 +246,10 @@ function showMenuItem(restaurantId, itemName, menuItem){
 	// Display the menu item
 	screen.appendChild(menuItem);
 	animatePages();
+
+	// Add the item name to the URL
+	//location.hash = itemName;
+	window.history.pushState({}, '', pageURL + "#" + itemName);
 }
 
 // Open the menu
