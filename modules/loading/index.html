@@ -1,4 +1,7 @@
 <link rel="stylesheet" type="text/css" href="index.css">
+<script>
+	var onFinishedLoading = {{onFinishedLoading}};
+</script>
 <script src="index.js"></script>
 
 <img id="logo" src="logo.svg">
@@ -11,7 +14,3 @@
 --><div class="loadingBlock"></div><!--
 --><div class="loadingBlock"></div><!--
 --><div class="loadingBlock"></div>
-
-<script>
-	setTimeout({{onFinishedLoading}}, 8000);
-</script>

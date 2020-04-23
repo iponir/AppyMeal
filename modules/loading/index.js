@@ -11,9 +11,22 @@ function load(loadingBlocks, index){
 		if(pages[name]){
 			continue;
 		}
-
+		
 		pages[name] = modularjs.newModule(name, {});
 	}
+
+	// Kill the loading screen once all modules have loaded
+	modularjs.doOnceLoaded.push(
+		function(){
+			
+			// If the loading module is in the DOM, remove it and proceed
+			var loadingModule = modularjs.mainDoc.querySelector("module[name='" + document.name + "']");
+			if(loadingModule){
+				loadingModule.remove();
+				onFinishedLoading();
+			}
+		}
+	);
 
 	// If loadingBlocks is undefined, gather the loading blocks
 	if(!loadingBlocks){
