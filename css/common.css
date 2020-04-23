@@ -176,7 +176,7 @@ input[type="submit"]:hover {
 	/*border-radius: 0 0 30px 30px;*/
 	overflow-y: auto;
 	overflow-x: hidden;
-	scrollbar-width: none;
+	/*scrollbar-width: none;*/
 }
 
 /*
@@ -184,6 +184,11 @@ input[type="submit"]:hover {
 	display: none;
 }
 */
+
+#scrollWindow {
+	max-width: 500px;
+	margin: auto;
+}
 
 #navBar {
 	text-align: left;
