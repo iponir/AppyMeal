@@ -7,6 +7,9 @@ label {
 	display: inline-block;
 	font-size: 1.5em;
 	font-weight: bold;
+	background: white;
+	border-radius: 5px;
+	padding-right: 10px;
 }
 
 .noHover {
@@ -88,6 +91,9 @@ label {
 	cursor: pointer;
 }
 
+#options {
+	padding-bottom: 30px;
+}
 
 #notificationRail {
 	display: inline-block;
