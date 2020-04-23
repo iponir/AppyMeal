@@ -106,6 +106,7 @@ function goToPage(pageURL, dontUpdateHistory){
 	var queryParams = pageURL.split("?")[1];
 
 	switch(pageRoot){
+		case "":
 		case "login":
 			showLoading("goToLogin");
 			break;

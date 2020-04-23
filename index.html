@@ -17,10 +17,6 @@
 	<script>
 		// Navigate to the appropriate page
 		var pageURL = location.href.split(location.host + "/")[1];
-		if(pageURL == ""){
-			goToPage("login");
-		}else{
-			goToPage(pageURL);
-		}
+		goToPage(pageURL);
 	</script>
 </html>
