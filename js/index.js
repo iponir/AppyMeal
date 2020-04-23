@@ -1,6 +1,7 @@
 window.onpopstate = function(event){
 	var pageURL = location.pathname.substr(1) + location.search;
-	goToPage(pageURL, true);
+	var dontUpdateHistory = true;
+	goToPage(pageURL, dontUpdateHistory);
 }
 
 pages = {
@@ -100,11 +101,9 @@ function animatePages(){
 }
 
 // Go to the specified page and update the browser history accordingly
-function goToPage(pageURL, dontPushState){
+function goToPage(pageURL, dontUpdateHistory){
 	var pageRoot = pageURL.split("?")[0];
 	var queryParams = pageURL.split("?")[1];
-
-	console.log(pageRoot);
 
 	switch(pageRoot){
 		case "login":
@@ -117,11 +116,11 @@ function goToPage(pageURL, dontPushState){
 			showLoading("goToCart");
 			break;
 		case "details":
-			var restaurantId = queryParams.split("=")[1].split("#")[0];
-			var itemName = queryParams.split("#")[1];
+			var restaurantId = queryParams.split("&")[0].split("restaurantId=")[1];
+			var itemName = decodeURI(queryParams.split("itemName=")[1]);
 			var onLoadOperation = "(" +
 				"function(){" +
-					"goToDetails('" + restaurantId + "');" +
+					"goToDetails('" + restaurantId + "', '" + itemName + "');" +
 				"}" +
 			")";
 			showLoading(onLoadOperation);
@@ -130,8 +129,8 @@ function goToPage(pageURL, dontPushState){
 			showErrorPage("404 Not Found", "Oops! We couldn't find this page!");
 	}
 
-	// If the state should be pushed, do so
-	if(!dontPushState){
+	// If the history is supposed to be updated, do so
+	if(!dontUpdateHistory){
 		window.history.pushState({}, '', pageURL);
 	}
 }
@@ -185,7 +184,7 @@ function goToCart(){
 }
 
 // Navigate to a particular restaurant's detail page based on the provided restaurant Id
-function goToDetails(restaurantId){
+function goToDetails(restaurantId, itemName){
 	var screen = document.getElementById("screen");
 	var xhttp = new XMLHttpRequest();
 	var url = "/menus/" + restaurantId;
@@ -212,9 +211,19 @@ function goToDetails(restaurantId){
 			details.style["clip-path"] = "inset(0 0 0 100%)";
 			details.style.transform = "translateY(-100%)";
 
-			// Insert the details page
-			screen.appendChild(details);
-			animatePages();
+			// If itemName is not "undefined", show the item details
+			if(itemName != "undefined"){
+				itemName = decodeURIComponent(itemName).replace("&#39;", "'");
+				console.log(menu);
+				console.log(itemName);
+				showMenuItem(restaurantId, itemName, menu[itemName]);
+
+			// Else, insert the details page
+			}else{
+				screen.appendChild(details);
+				animatePages();
+			}
+
 		}else if(this.readyState == 4){
 			alert("There was an error loading the menu");
 			throw this.responseText;
@@ -249,7 +258,8 @@ function showMenuItem(restaurantId, itemName, menuItem){
 
 	// Add the item name to the URL
 	//location.hash = itemName;
-	window.history.pushState({}, '', pageURL + "#" + itemName);
+	//console.log("Altered history");
+	//window.history.pushState({}, '', location.href + "&itemName=" + encodeURIComponent(itemName));
 }
 
 // Open the menu

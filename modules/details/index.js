@@ -23,7 +23,7 @@ function populateMenu(menu){
 			continue;
 		}
 
-		menuElement.innerHTML += '<tr class=\'' + itemName.replace(/'/g, "&#39;") + '\' onclick=\'showMenuItem("' + restaurantId.replace(/'/g, "&#39;") + '", "' + itemName.replace(/'/g, "&#39;") + '", ' + JSON.stringify(menu[itemName]).replace(/'/g, "&#39;") + ')\'>' +
+		menuElement.innerHTML += '<tr onclick=\'goToPage("' + "details?restaurantId=" + restaurantId + "&itemName=" + encodeURIComponent(itemName.replace("'", "&#39;")) + '")\'>' +
 			'<td>' +
 				'<h3>' + itemName + '</h3>' +
 				'<p>' + menu[itemName].description + '</p>' +
