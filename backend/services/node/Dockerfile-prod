@@ -1,0 +1,14 @@
+FROM node:12-alpine
+
+WORKDIR usr/src/app
+
+COPY package.json /usr/src/app/package.json
+
+ENV DB_NAME=
+ENV DB_HOST=redis_dos
+ENV DB_PORT=''
+ENV DB_PASS=''
+
+RUN npm install
+
+CMD ["npm", "start"]

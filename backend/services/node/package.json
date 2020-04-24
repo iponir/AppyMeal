@@ -1,0 +1,29 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redis":"3.0.2",
+    "body-parser":"^1.18.3",
+    "express":"4.16.4",
+    "method-override":"3.0.0",
+    "node-cron":"2.0.3",
+    "path":"0.12.7",
+    "morgan":"1.9.1",
+    "jsonwebtoken":"8.5.1",
+    "mailgun-js": "0.22.0",
+    "yelp-fusion":"3.0.0",
+    "stripe": "8.33.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
