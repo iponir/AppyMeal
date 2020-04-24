@@ -1,0 +1,6 @@
+[submodule "appymeal-backend"]
+	path = appymeal-backend
+	url = git@github.com:mhanberry1/appymeal-backend.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:mhanberry1/appymeal-backend.git

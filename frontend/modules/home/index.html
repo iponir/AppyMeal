@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="index.css">
+<script src="index.js"></script>
+
+<div id="navBar">
+	<span id="menuButton" onclick="showMenu()">
+		<img src="bars.svg">
+	</span><!--
+	--><span id="location">
+		<img src="location.svg"><!--
+		--><span>Duluth, Georgia</span><!--
+		--><img src="downArrow.svg">
+	</span><!--
+	--><img id="favorites" src="heart.svg"><!--
+	--><img id="checkout" onclick="goToPage('cart')" src="bag.svg">
+</div>
+
+<div id="main">
+	<h2>Local Restaurants Near You</h2>
+	<div class="restaurant">
+		<div class="preview" style="background: url('/img/restaurants/Pancake%20House/food1.jpg'); background-size: cover;" onclick="goToPage('details?restaurantId=Pancake%20House')">
+			<div class="rating" >★ 4.5</div>
+		</div>
+		<h3>Pancake House</h3>
+		<p>Breakfast</p>
+		<div class="like"></div>
+		<div class="menuButton" onclick="goToPage('details?restaurantId=Pancake%20House')">Menu</div>
+	</div>
+	<div class="restaurant">
+		<div class="preview" style="background: url('/img/restaurants/Wing%20Stop/food1.jpg'); background-size: cover;" onclick="goToPage('details?restaurantId=Wing%20Stop')">
+			<div class="rating">★ 4.5</div>
+		</div>
+		<h3>Wing Stop</h3>
+		<p>Bar Food</p>
+		<div class="like"></div>
+		<div class="menuButton" onclick="goToPage('details?restaurantId=Wing%20Stop')">Menu</div>
+	</div>
+</div>
+
+<script>
+	addSVG();
+</script>

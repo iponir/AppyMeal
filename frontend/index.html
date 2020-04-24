@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+		<link rel="stylesheet" type="text/css" href="/css/common.css">
+		<script src="/js/modular.js"></script>
+		<script src="/js/index.js"></script>
+	</head>
+	<body>
+		<div id="speaker"></div>
+		<div id="camera"></div>
+		<div id="screen">
+			<module name="login"></module>
+		</div>
+	</body>
+	<script>
+		// Navigate to the appropriate page
+		var pageURL = location.href.split(location.host + "/")[1];
+		goToPage(pageURL);
+	</script>
+</html>

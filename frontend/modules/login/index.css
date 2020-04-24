@@ -1,0 +1,24 @@
+body {
+	text-align: center;
+}
+
+p {
+	color: dimgray;
+}
+
+#logo {
+	height: 150px;
+	margin-top: 75px;
+}
+
+#forgotPassword {
+	display: block;
+	text-align: left;
+	margin: 25px;
+	width: calc(100% - 25px);
+}
+
+#loginForm {
+	max-width: 500px;
+	margin: auto;
+}

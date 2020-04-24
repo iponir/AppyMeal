@@ -1,0 +1,93 @@
+body {
+	background: white;
+}
+
+h1 {
+	margin: 20px 20px 0 20px;
+	text-align: left;
+}
+
+h2 {
+	text-align: left;
+	margin: 20px;
+}
+
+h3, p {
+	margin: 0;
+}
+
+table {
+	text-align: left;
+	width: calc(100% - 2 * 20px);
+	margin: -10px 20px;
+	border-collapse: collapse;
+}
+
+tr:hover {
+	cursor: pointer;
+}
+
+td {
+	padding: 10px 0;
+	border-bottom: 1px solid dimgray;
+}
+
+td:first-child {
+	padding-right: 5px;
+}
+
+td:last-child {
+	padding-left: 5px;
+}
+
+.rating {
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.image {
+	display: inline-block;
+	width: 100%;
+	height: 300px;
+	max-width: 500px;
+	z-index: 1;
+	position: relative;
+}
+
+#imagesBackground {
+	display: block;
+	width: 100%;
+	height: 330px;
+	filter: blur(8px);
+	margin: -15px 0 -315px -15px;
+}
+
+#images {
+	width: calc(100% + 30px);
+	max-height: 300px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+	margin-left: -15px;
+}
+
+#distance {
+	font-size: 12pt;
+	font-weight: normal;
+	padding-left: 10px;
+}
+
+#type {
+	font-weight: normal;
+	text-align: left;
+	margin: 0 20px;
+}
+
+#linkArea {
+	text-align: left;
+	margin: 10px 20px;
+}
+
+#moreInfo {
+	float: right;
+}

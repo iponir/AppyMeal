@@ -1,0 +1,254 @@
+@import url("/css/fonts.css");
+
+* {
+	font-family: GillSans;
+	scrollbar-width: thin;
+	scrollbar-color: #be1e2d white;
+}
+
+*::-webkit-scrollbar {
+	height: 6px;
+	width: 6px;
+	background-color: white;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #be1e2d;
+}
+
+html {
+	height: 100vh;
+	background: #222;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	text-align: center;
+	overflow: hidden;
+	/*
+	width: 360px;
+	padding: 30px 10px 10px 10px;
+	margin: calc((100vh - 780px) / 2) auto;
+	background: black;
+	border-radius: 40px 40px 40px 40px;
+	*/
+}
+
+a {
+	color: #be1e2d;
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+label {
+	color: dimgray;
+	display: block;
+	text-align: left;
+	margin: 25px 25px 0 25px;
+	width: 100%;
+}
+
+input {
+	font-family: GillSans;
+}
+
+input[type="text"], input[type="password"] {
+	border: none;
+	border-bottom: 1px solid lightgray;
+	margin: 0 25px;
+	padding: 5px 0;
+	width: calc(100% - 2 * 25px);
+	font-size: 1em;
+}
+
+input[type="submit"] {
+	display: block;
+	font-size: 1.1em;
+	color: white;
+	background: #be1e2d;
+	padding: 15px 0;
+	margin: 50px 25px;
+	width: calc(100% - 2 * 25px);
+	border-radius: 5px;
+	border: none;
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.rating {
+	display: block;
+	text-align: center;
+	padding: 2px;
+	background: rgba(0, 0, 0, 0.7);
+	margin: 5px;
+	width: 50px;
+	border-radius: 5px;
+	color: white;
+	line-height: 1.5em;
+}
+
+#screen {
+	height: 100%;
+}
+
+/*
+#speaker {
+	display: inline-block;
+	height: 10px;
+	width: 50px;
+	background: #222;
+	border-radius: 5px;
+	position: absolute;
+	left: calc(50vw - 50px / 2);
+	top: calc((100vh - 780px) / 2 + 10px);
+}
+
+#camera {
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background: #222;
+	border-radius: 50%;
+	position: absolute;
+	left: calc(50vw + 35px);
+	top: calc((100vh - 780px) / 2 + 9px);
+}
+
+#screen {
+	display: block;
+	height: 740px;
+	width: 360px;
+	border-radius: 30px;
+}
+*/
+
+#screen > module {
+	display: block;
+	height: 100%;
+	width: 100%;
+	/*border-radius: 30px;*/
+	clip-path: inset(0 0 0 0);
+	transition: clip-path 0.5s;
+}
+
+#headerBar {
+	text-align: left;
+	display: block;
+	height: 60px;
+	width: 100%;
+	background: #be1e2d;
+	color: white;
+	line-height: 60px;
+	/*border-radius: 30px 30px 0 0;*/
+	font-weight: bold;
+}
+
+#headerBar:hover {
+	cursor: pointer;
+}
+
+#backButton {
+	font-size: 2em;
+	padding: 0 25px;
+	margin-top: -3px;
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+}
+
+#pageTitle {
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+}
+
+#main {
+	background: white;
+	display: block;
+	height: calc(100% - 60px);
+	/*border-radius: 0 0 30px 30px;*/
+	overflow-y: auto;
+	overflow-x: hidden;
+	/*scrollbar-width: none;*/
+}
+
+/*
+#main::-webkit-scrollbar {
+	display: none;
+}
+*/
+
+#scrollWindow {
+	max-width: 500px;
+	margin: auto;
+}
+
+#navBar {
+	text-align: left;
+	display: block;
+	height: 60px;
+	width: 100%;
+	background: #373a43;
+	color: white;
+	line-height: 60px;
+	/*border-radius: 30px 30px 0 0;*/
+}
+
+#menuButton {
+	text-align: center;
+	display: inline-block;
+	height: 100%;
+	background: #be1e2d;
+	width: 60px;
+	/*border-radius: 30px 0 0 0;*/
+}
+
+#menuButton:hover {
+	cursor: pointer;
+}
+
+#menuButton img {
+	margin-top: 20px;
+	height: 20px;
+}
+
+#location {
+	display: inline-block;
+	height: 100%;
+	width: calc(100% - 60px - 2 * 40px - 3 * 10px);
+	padding: 0 10px;
+	line-height: 60px;
+	vertical-align: top;
+}
+
+#location img {
+	vertical-align: middle;
+	height: 20px;
+}
+
+#location img:first-child {
+	margin-top: -8px;
+	height: 30px;
+}
+
+#location span {
+	padding: 0 10px;
+	font-size: 1em;
+}
+
+#favorites, #checkout {
+	width: 20px;
+	vertical-align: top;
+	margin: 20px 10px;
+}
+
+#favorites:hover, #checkout:hover {
+	cursor: pointer;
+}

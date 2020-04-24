@@ -1,0 +1,38 @@
+body {
+	background: linear-gradient(#be1e2d 25%, white 50%);
+	text-align: center;
+}
+
+.loadingBlock {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	max-width: calc(80vw / 15);
+	max-height: calc(80vw / 15);
+	margin: 10px 3px 0 3px;
+	border: 5px solid #be1e2d;
+	transition: 0.5s;
+}
+
+.loadingBlock.fill {
+	background: #be1e2d;
+}
+
+#logo {
+	width: 330px;
+	max-width: 80vw;
+	margin-top: 30px;
+}
+
+#loading {
+	display: block;
+	height: 38px;
+	max-width: 80vw;
+	margin: 50px auto 0 auto;
+}
+
+@media(max-width: 280px){
+	#loading{
+		height: unset;
+	}
+}

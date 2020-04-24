@@ -1,0 +1,63 @@
+h2 {
+	margin: 0;
+	padding: 10px 0;
+}
+
+h3 {
+	margin-bottom: 0;
+}
+
+p {
+	margin-top: 0;
+}
+
+.restaurant {
+	text-align: left;
+	display: inline-block;
+	width: calc(100% - 2 * 20px);
+	margin: 5px 20px 55px 20px;
+	max-width: 350px;
+}
+
+.restaurant:hover {
+	cursor: pointer;
+}
+
+.preview {
+	display: block;
+	height: 300px;
+	border-radius: 5px;
+}
+
+.like {
+	float: right;
+	margin-top: -60px;
+}
+
+.rating {
+	float: right;
+}
+
+.menuButton {
+	display: block;
+	line-height: 2.2em;
+	background: #be1e2d;
+	width: 85px;
+	text-align: center;
+	color: white;
+	border: 1px solid #be1e2d;
+	border-radius: 5px;
+	float: right;
+	padding-bottom: 2px;
+	margin-top: -16px;
+}
+
+.menuButton:hover {
+	cursor: pointer;
+	background: white;
+	color: #be1e2d;
+}
+
+#location:hover {
+	cursor: pointer;
+}

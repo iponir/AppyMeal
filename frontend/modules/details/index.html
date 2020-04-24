@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text-css" href="index.css">
+<script>
+	var menu = {{menu}};
+	var restaurantId = "{{restaurantId}}";
+	var images = {{images}};
+</script>
+<script src="index.js"></script>
+
+<div id="headerBar">
+	<span id="backButton" onclick="goToPage('home')">‹</span><span id="pageTitle">Restaurant Details</span>
+</div>
+
+<div id="main">
+	<div id="images">
+	</div>
+
+	<h1>{{name}}<span id="distance">1.2 mi</span></h1>
+	<h2 id="type">{{type}}</h2>
+	<div class="rating" >★ 4.5</div>
+	<div id="linkArea">
+		<a>Location and Hours</a>
+		<a id="moreInfo">More info ›</a>
+	</div>
+
+	<h2>Menu</h2>
+	<table id="menu">
+		<tbody></tbody>
+	</table>
+</div>

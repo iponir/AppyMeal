@@ -1,0 +1,77 @@
+{
+	"__name" : "Pancake House",
+	"__type" : "Breakfast",
+	"Apple Pancake" : {
+		"description" : "Oven baked with fresh granny smith apples and pure Sinkiangcinnamon glaze",
+		"price" : 13.85,
+		"addons" : {
+			"Extra Toppings" : [
+				"Whipped Cream",
+				"Peaches",
+				"Fresh Apples",
+				"Cherries",
+				"Powdered Sugar"
+			]
+		},
+		"options" : {}
+	},
+	"Dutch Baby" : {
+		"description" : "Oven baked. Served with whipped butter, lemon and powdered sugar.",
+		"price" : 12.45,
+		"addons" : {
+			"Extra Toppings" : [
+				"Whipped Cream",
+				"Peaches",
+				"Fresh Apples",
+				"Cherries",
+				"Powdered Sugar"
+			]
+		},
+		"options" : {}
+	},
+	"Fresh Vegetarian Omelette" : {
+		"description" : "Ourfluffy omelette filled with fresh broccoli, fresh tomatoes, fresh mushrooms, and aged cheddar cheese.",
+		"price" : 14.50,
+		"addons" : {},
+		"options" : {
+			"Egg Type" : [
+				"whole egg",
+				"egg whites"
+			]
+		}
+	},
+	"Corn Beef Hash" : {
+		"description" : "Our homemad hash, a blend of kosher corned beef, potatoes, onions, and cream.",
+		"price" : 14.95,
+		"addons" : {},
+		"options" : {}
+	},
+	"The Tahitian Maiden's Dream" : {
+		"description" : "A tender crepe filled with golden ripe bananas sliced in sour cream and tempered with Triple Sec, sherry, and brandy. Topped with diced bananas in our apricot sauce.",
+		"price" : 13.85,
+		"addons" : {
+			"Extra Toppings" : [
+				"Whipped Cream",
+				"Peaches",
+				"Fresh Apples",
+				"Cherries",
+				"Powdered Sugar"
+			]
+		},
+		"options" : {}
+	},
+	"Danish Kijafa Cherry Crepes" : {
+		"description" : "A Danish favorite! Three delicate crepesfilled and topped with Montmorency cherries simmered in our Kijafa sauce and lightly dusted with powdered sugar.",
+		"price" : 12.25,
+		"addons" : {
+			"Extra Toppings" : [
+				"Whipped Cream",
+				"Peaches",
+				"Fresh Apples",
+				"Cherries",
+				"Powdered Sugar"
+			]
+		},
+		"options" : {}
+	}
+}
